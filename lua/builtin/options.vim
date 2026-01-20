@@ -5,7 +5,7 @@
 " * https://github.com/mhinz/vim-galore#tips-1
 
 " cursor movement
-set whichwrap+=b,s,<,>,[,]
+set whichwrap+=h,l,b,s,<,>,[,]
 
 " complete option
 set completeopt+=menu,menuone,preview
@@ -16,9 +16,9 @@ set smartindent
 set autoindent
 set expandtab
 set smarttab
-set tabstop=2
-set softtabstop=2
-set shiftwidth=2
+set tabstop=4
+set softtabstop=4
+set shiftwidth=4
 
 " editorconfig
 let g:editorconfig=1
