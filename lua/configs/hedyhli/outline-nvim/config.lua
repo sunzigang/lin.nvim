@@ -3,7 +3,10 @@ local constants = require("builtin.constants")
 require("outline").setup({
   outline_window = {
     width = constants.layout.sidebar.scale * 100,
-    focus_on_open = false,
+    focus_on_open = true,
+  },
+  preview_window = {
+    auto_preview = true,
   },
   outline_items = {
     auto_update_events = {

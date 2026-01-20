@@ -1,8 +1,8 @@
 local set_lazy_key = require("builtin.utils.keymap").set_lazy_key
 
 local M = {
-  set_lazy_key("n", "gd", "<CMD>Glance definitions<CR>", { desc = "Go to LSP definition" }),
-  set_lazy_key("n", "gr", "<CMD>Glance references<CR>", { desc = "Go to LSP reference" }),
+  set_lazy_key("n", "<space>gd", "<CMD>Glance definitions<CR>", { desc = "Go to LSP definition" }),
+  set_lazy_key("n", "<space>gr", "<CMD>Glance references<CR>", { desc = "Go to LSP reference" }),
   set_lazy_key(
     "n",
     "gt",

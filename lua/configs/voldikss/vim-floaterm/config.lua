@@ -1,0 +1,3 @@
+require("vim-floaterm").setup({
+
+})

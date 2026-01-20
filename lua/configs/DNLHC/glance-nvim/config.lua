@@ -6,5 +6,25 @@ glance.setup({
   folds = {
     folded = false,
   },
-  border = { enable = true },
+
+  theme = {
+    enable = true,
+    mode = 'brighten',
+  },
+
+  border = {
+    enable = true,
+    top_char = '―',
+    bottom_char = '―',
+  },
+  hooks = {
+    before_open = function(results, open, jump, method)
+      if #results == 1 then
+        jump(results[1])
+      else
+        open(results)
+      end
+    end,
+  }
+
 })

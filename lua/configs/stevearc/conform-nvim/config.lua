@@ -20,4 +20,9 @@ require("conform").setup({
     timeout_ms = 2000,
     lsp_fallback = true,
   },
+  formatters = {
+    clang_format = {
+      prepend_args = { "--style=file:/home/sun/.clang-format" },
+    },
+  },
 })

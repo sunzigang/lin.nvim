@@ -7,14 +7,18 @@ local disabled_colors = {
 }
 
 require("colorbox").setup({
-  background = "dark",
-  filter = {
-    "primary",
-    function(color, spec)
-      return spec.github_stars >= 900
-    end,
-    function(color, spec)
-      return type(spec.handle) == "string" and not disabled_colors[spec.handle]
-    end,
-  },
+  filter = false,
+  background="dark",
+  colorscheme="vscode",
+  policy = "single",
+  timing = "startup"
 })
+
+--[[
+-- colorscheme  选择颜色预览， 确认后  修改上面plilcy字段
+--
+--
+]]
+
+
+

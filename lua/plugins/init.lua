@@ -117,6 +117,11 @@ local M = {
     event = { VeryLazy },
     config = lua_config("stevearc/stickybuf.nvim"),
   },
+  {
+    'stevearc/resession.nvim',
+    config = lua_config("stevearc/resession.nvim"),
+  },
+
 
   -- ---- SEARCH ----
 

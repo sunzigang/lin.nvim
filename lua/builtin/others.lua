@@ -7,7 +7,7 @@ local set_key = require("builtin.utils.keymap").set_key
 set_key("n", "@", "<Noq>", { silent = true, desc = "Disable macro recording" })
 set_key(
   { "n", "x" },
-  "<leader>ww",
+  "<leader>fs",
   ":noa w<CR>",
   { silent = false, desc = "Save file without formatting" }
 )
