@@ -7,5 +7,6 @@ return {
     ["folke/flash.nvim"] = true,  -- 更现代的跳转工具（支持多光标、搜索集成等）
     ["tpope/vim-repeat"] = true, --- 让自定义操作支持 . 重复（如注释后按 . 可重复注释
     ["moll/vim-bbye"] = true,  -- 安全关闭缓冲区而不退出窗口（:Bdelete）
+    ["ahmedkhalf/project.nvim"]=true, -- 项目管理插件
     -- ["saghen/blink.indent"] = true
   }

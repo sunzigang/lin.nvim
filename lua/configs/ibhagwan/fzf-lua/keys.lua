@@ -98,67 +98,77 @@ end
 
 local M = {
   -- find files
-  set_lazy_key("n", "<space>f", function()
+  set_lazy_key("n", "<space>ffi", function()
     require("fzf-lua").files({ prompt = get_cwd() })
   end, { desc = "Find files" }),
+<<<<<<< HEAD
   set_lazy_key("x", "<space>f", function()
     require("fzf-lua").files({
       query = get_visual_select(),
       prompt = get_cwd(),
     })
+=======
+  set_lazy_key("x", "<space>function", function()
+    require("fzf-lua").files({ query = get_visual_select(), prompt = get_cwd() })
+>>>>>>> 48ad67f (修改部分快捷键  增加ression的支持)
   end, { desc = "Find files" }),
-  set_lazy_key("n", "<space>wf", function()
+  set_lazy_key("n", "<space>ffw", function()
     require("fzf-lua").files({ query = get_cword(), prompt = get_cwd() })
   end, { desc = "Find files by cword" }),
-  set_lazy_key("n", "<space>wf", function()
+  set_lazy_key("n", "<space>ffw", function()
     require("fzf-lua").files({ query = get_cword(), prompt = get_cwd() })
   end, { desc = "Find files by cword" }),
-  set_lazy_key("n", "<space>rf", function()
+  set_lazy_key("n", "<space>ffr", function()
     require("fzf-lua").files({ resume = true, prompt = get_cwd() })
   end, { desc = "Find files by resume" }),
 
   -- find git files
-  set_lazy_key("n", "<space>gf", function()
+  set_lazy_key("n", "<space>fgf", function()
     require("fzf-lua").git_files({ prompt = get_cwd() })
   end, { desc = "Search git files" }),
+<<<<<<< HEAD
   set_lazy_key("x", "<space>gf", function()
     require("fzf-lua").git_files({
       query = get_visual_select(),
       prompt = get_cwd(),
     })
+=======
+  set_lazy_key("x", "<space>fgf", function()
+    require("fzf-lua").git_files({ query = get_visual_select(), prompt = get_cwd() })
+>>>>>>> 48ad67f (修改部分快捷键  增加ression的支持)
   end, { desc = "Search git files" }),
 
   -- search buffers
-  set_lazy_key("n", "<space>bf", function()
+  set_lazy_key("n", "<space>fb", function()
     require("fzf-lua").buffers()
   end, { desc = "Search buffers" }),
-  set_lazy_key("x", "<space>bf", function()
+  set_lazy_key("x", "<space>fb", function()
     require("fzf-lua").buffers({ query = get_visual_select() })
   end, { desc = "Search buffers" }),
 
   -- live grep
-  set_lazy_key("n", "<space>l", function()
+  set_lazy_key("n", "<space>fl", function()
     require("fzf-lua").live_grep()
   end, { desc = "Live grep" }),
-  set_lazy_key("x", "<space>l", function()
+  set_lazy_key("x", "<space>fl", function()
     require("fzf-lua").live_grep({ query = get_visual_select() })
   end, { desc = "Live grep" }),
-  set_lazy_key("n", "<space>wl", function()
+  set_lazy_key("n", "<space>flw", function()
     require("fzf-lua").live_grep({ query = get_cword() })
   end, { desc = "Live grep by cword" }),
-  set_lazy_key("n", "<space>rl", function()
+  set_lazy_key("n", "<space>flr", function()
     require("fzf-lua").live_grep({ resume = true })
   end, { desc = "Live grep by resume " }),
 
   -- git live grep
-  set_lazy_key("n", "<space>gl", function()
+  set_lazy_key("n", "<space>fgl", function()
     require("fzf-lua").live_grep({
       cmd = "git grep --line-number --column --color=always",
       prompt = "Live Grep (Git)> ",
       actions = git_grep_actions(),
     })
   end, { desc = "Git live grep" }),
-  set_lazy_key("x", "<space>gl", function()
+  set_lazy_key("x", "<space>fgl", function()
     require("fzf-lua").live_grep({
       cmd = "git grep --line-number --column --color=always",
       query = get_visual_select(),

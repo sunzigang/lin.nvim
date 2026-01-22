@@ -19,7 +19,6 @@ local UIEnter = "UIEnter"
 
 local M = {
   -- ---- INFRASTRUCTURE ----
-
   {
     "nvim-lua/plenary.nvim",
     lazy = true,
@@ -116,10 +115,6 @@ local M = {
     "stevearc/stickybuf.nvim",
     event = { VeryLazy },
     config = lua_config("stevearc/stickybuf.nvim"),
-  },
-  {
-    'stevearc/resession.nvim',
-    config = lua_config("stevearc/resession.nvim"),
   },
 
 
