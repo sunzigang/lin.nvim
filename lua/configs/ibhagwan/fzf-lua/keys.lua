@@ -102,15 +102,21 @@ local M = {
     require("fzf-lua").files({ prompt = get_cwd() })
   end, { desc = "Find files" }),
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 72108f3 ( Merge branch 'main' of https://github.com/linrongbin16/lin.nvim)
   set_lazy_key("x", "<space>f", function()
     require("fzf-lua").files({
       query = get_visual_select(),
       prompt = get_cwd(),
     })
+<<<<<<< HEAD
 =======
   set_lazy_key("x", "<space>function", function()
     require("fzf-lua").files({ query = get_visual_select(), prompt = get_cwd() })
 >>>>>>> 48ad67f (修改部分快捷键  增加ression的支持)
+=======
+>>>>>>> 72108f3 ( Merge branch 'main' of https://github.com/linrongbin16/lin.nvim)
   end, { desc = "Find files" }),
   set_lazy_key("n", "<space>ffw", function()
     require("fzf-lua").files({ query = get_cword(), prompt = get_cwd() })
@@ -127,6 +133,7 @@ local M = {
     require("fzf-lua").git_files({ prompt = get_cwd() })
   end, { desc = "Search git files" }),
 <<<<<<< HEAD
+<<<<<<< HEAD
   set_lazy_key("x", "<space>gf", function()
     require("fzf-lua").git_files({
       query = get_visual_select(),
@@ -136,6 +143,10 @@ local M = {
   set_lazy_key("x", "<space>fgf", function()
     require("fzf-lua").git_files({ query = get_visual_select(), prompt = get_cwd() })
 >>>>>>> 48ad67f (修改部分快捷键  增加ression的支持)
+=======
+  set_lazy_key("x", "<space>fgf", function()
+    require("fzf-lua").git_files({ query = get_visual_select(), prompt = get_cwd() })
+>>>>>>> 72108f3 ( Merge branch 'main' of https://github.com/linrongbin16/lin.nvim)
   end, { desc = "Search git files" }),
 
   -- search buffers
