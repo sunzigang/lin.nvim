@@ -1,0 +1,136 @@
+-- ---- Users Plugins ----
+
+-- Please uncomment belows and rename this file to 'users.lua' to enable it.
+
+local lua_keys = require("builtin.utils.plugin").lua_keys
+local lua_init = require("builtin.utils.plugin").lua_init
+local lua_config = require("builtin.utils.plugin").lua_config
+local vim_init = require("builtin.utils.plugin").vim_init
+local vim_config = require("builtin.utils.plugin").vim_config
+
+local VeryLazy = "VeryLazy"
+local BufReadPre = "BufReadPre"
+local BufNewFile = "BufNewFile"
+local CmdlineEnter = "CmdlineEnter"
+local VimEnter = "VimEnter"
+local InsertEnter = "InsertEnter"
+local UIEnter = "UIEnter"
+--
+-- return {
+--   -- Vim editing behavior
+--   {
+--     "m4xshen/hardtime.nvim",
+--     dependencies = { "MunifTanjim/nui.nvim" },
+--     config = lua_config("m4xshen/hardtime.nvim"),
+--   },
+--   -- No-highlight
+--   {
+--     "romainl/vim-cool",
+--     event = { BufReadPre, BufNewFile, VeryLazy },
+--   },
+--   -- Yank
+--   {
+--     "gbprod/yanky.nvim",
+--     config = lua_config("gbprod/yanky.nvim"),
+--     keys = lua_keys("gbprod/yanky.nvim"),
+--   },
+--   {
+--     "rachartier/tiny-glimmer.nvim",
+--     event = "VeryLazy",
+--     priority = 1, -- Needs to be a really low priority, to catch others plugins keybindings.
+--     opts = {},
+--   },
+--   -- Markdown Preview
+--   {
+--     "iamcco/markdown-preview.nvim",
+--     build = function()
+--       vim.fn["mkdp#util#install"]()
+--     end,
+--     ft = { "markdown" },
+--     init = lua_init("iamcco/markdown-preview.nvim"),
+--     keys = lua_keys("iamcco/markdown-preview.nvim"),
+--   },
+--   -- Vim/Neovim api version helper
+--   {
+--     "tweekmonster/helpful.vim",
+--     cmd = { "HelpfulVersion" },
+--   },
+--   -- Todo comments
+--   {
+--     "folke/todo-comments.nvim",
+--     event = { VeryLazy, BufReadPre, BufNewFile },
+--     config = lua_config("folke/todo-comments.nvim"),
+--   },
+--   -- Neovim development
+--   {
+--     "folke/lazydev.nvim",
+--     ft = "lua", -- only load on lua files
+--     dependencies = { "Bilal2453/luvit-meta" },
+--     opts = {
+--       library = {
+--         { path = "luvit-meta/library", words = { "vim%.uv", "uv%." } },
+--       },
+--     },
+--   },
+--   -- Mark word
+--   {
+--     "inkarkat/vim-ingo-library",
+--     lazy = true,
+--   },
+--   {
+--     "inkarkat/vim-mark",
+--     event = { CmdlineEnter },
+--     dependencies = { "inkarkat/vim-ingo-library" },
+--     init = lua_init("inkarkat/vim-mark"),
+--     keys = lua_keys("inkarkat/vim-mark"),
+--   },
+--   {
+--     "mrcjkb/rustaceanvim",
+--     version = "*",
+--     lazy = false,
+--   },
+--   {
+--     "saecki/crates.nvim",
+--     version = "*",
+--     opts = {},
+--   },
+--   {
+--     "vuki656/package-info.nvim",
+--     opts = {},
+--   },
+--   {
+--     "milanglacier/minuet-ai.nvim",
+--     lazy = false,
+--     config = lua_config("milanglacier/minuet-ai.nvim")
+--   },
+-- }
+
+return {
+
+
+  {
+    "inkarkat/vim-mark",
+    event = { CmdlineEnter },
+    dependencies = { "inkarkat/vim-ingo-library" },
+    init = lua_init("inkarkat/vim-mark"),
+    keys = lua_keys("inkarkat/vim-mark"),
+  },
+  --[[
+  {
+    "ahmedkhalf/project.nvim",
+    config = lua_config("ahmedkhalf/project.nvim"),
+  },
+  ]]
+  {
+    'stevearc/resession.nvim',
+    lazy= false,
+    config = lua_config("stevearc/resession.nvim"),
+  },
+  {
+    "voldikss/vim-floaterm",
+    event = { CmdlineEnter },
+    --dependencies = { "inkarkat/vim-ingo-library" },
+    -- init = lua_init("voldikss/vim-floaterm"),
+    keys = lua_keys("voldikss/vim-floaterm"),
+  }
+}
