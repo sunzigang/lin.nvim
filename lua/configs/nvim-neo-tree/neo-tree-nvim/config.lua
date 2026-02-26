@@ -1,3 +1,6 @@
+
+
+
 local constants = require("builtin.constants")
 local layout = require("builtin.utils.layout")
 local events = require("neo-tree.events")
@@ -77,7 +80,7 @@ require("neo-tree").setup({
       enabled = false,
     },
     type = {
-      enabled = true,
+      enabled = false,
     },
     last_modified = {
       enabled = false,
@@ -139,17 +142,10 @@ require("neo-tree").setup({
       },
     },
   },
-<<<<<<< HEAD
   event_handlers = {
     { event = events.FILE_MOVED, handler = on_move },
     { event = events.FILE_RENAMED, handler = on_move },
   },
-=======
-  buffer = {
-      show_unloaded = true,
-  },
-
->>>>>>> 48ad67f (修改部分快捷键  增加ression的支持)
 })
 
 local sidebar_resizing = false
@@ -211,4 +207,5 @@ local function bootstrap()
   vim.defer_fn(open_impl, 1)
 end
 
--- bootstrap()
+bootstrap()
+
